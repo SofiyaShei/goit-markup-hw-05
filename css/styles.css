@@ -116,23 +116,22 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms var(--transition-timing-function);
 }
 .site-nav-unit {
   position: relative;
   display: block;
 }
-
-.link-current.current::after {
+.current-link.link::after {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: -1px;
+  background-color: var(--accent-color);
   content: "";
   width: 100%;
   height: 4px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-top: 34px;
-  padding-bottom: 32px;
   border-radius: 2px;
-  border-color: var(--accent-color);
 }
 .site-nav .link-current {
   color: var(--accent-color);
@@ -142,6 +141,7 @@ img {
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--transition-timing-function);
 }
 .auth-nav {
   display: flex;
@@ -308,7 +308,6 @@ img {
   align-items: center;
   justify-content: center;
 }
-
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--accent-color);
@@ -336,7 +335,27 @@ img {
   gap: 30px;
   padding: 0;
 }
-
+.computer-item {
+  position: relative;
+}
+.computers-wrap {
+  display: flex;
+}
+.computers-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--light-text-color);
+  position: absolute;
+  background: rgba(47, 48, 58, 0.8);
+  padding: 27px 107px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  white-space: nowrap;
+}
 .team {
   background-color: #f5f4fa;
 }
@@ -416,6 +435,7 @@ div.team-member-description {
   gap: 8px;
   justify-content: center;
   margin-bottom: 50px;
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .portfolio .button {
@@ -457,19 +477,21 @@ div.team-member-description {
 }
 .portfolio-item:hover .portfolio-text {
   transform: translateY(0%);
+  transition: color 250ms var(--transition-timing-function);
 }
 .portfolio-text {
+  font-family: Roboto;
   position: absolute;
   top: 0;
   font-size: 16px;
-  font-weight: 400px;
+  font-weight: 400;
   color: var(--light-text-color);
   padding: 40px;
-  line-height: 1.5;
+  line-height: 1.7;
   background-color: rgba(33, 150, 243, 0.9);
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms linear;
+  transition: transform 250ms linear var(--transition-timing-function);
 }
 .portfolio-item:nth-child(3n) {
   margin: 0;
@@ -495,6 +517,7 @@ div.team-member-description {
 }
 
 .footer {
+  padding: 60px 0;
   background-color: var(--bg-color);
 }
 
@@ -537,9 +560,6 @@ div.team-member-description {
 }
 .footer-address {
   margin-right: 70px;
-}
-.footer-invitation {
-  margin: 93px;
 }
 .invitation {
   font-weight: 700;
@@ -657,8 +677,8 @@ div.team-member-description {
   pointer-events: none;
 }
 .icon-modal {
-  width: 11px;
-  height: 11px;
+  width: 18px;
+  height: 18px;
   justify-content: center;
   align-items: center;
 }
