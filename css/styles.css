@@ -154,6 +154,9 @@ img {
   margin-right: 10px;
   fill: var(--medium-text-color);
 }
+.address-link {
+  transition: color 250ms var(--transition-timing-function);
+}
 .auth-nav .link {
   color: var(--medium-text-color);
   font-weight: 500;
@@ -162,8 +165,7 @@ img {
   letter-spacing: 0.02em;
   align-items: center;
   justify-content: center;
-  transition: color 250ms var(--transition-timing-function);
-  transition: fill var(--accent-color);
+  transition: color, fill 250ms var(--transition-timing-function);
 }
 
 .auth-nav .item + .item {
@@ -302,6 +304,7 @@ img {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  transition: border, fill 250ms var(--transition-timing-function);
 }
 
 .clients-icon {
@@ -319,7 +322,6 @@ img {
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--accent-color);
-  transition: color 250ms var(--transition-timing-function);
 }
 .portfolio-item-title {
   font-size: 16px;
@@ -394,6 +396,7 @@ img {
   align-items: center;
   justify-content: center;
   fill: var(--primary-icon-color);
+  transition: background-color, fill 250ms var(--transition-timing-function);
 }
 
 .team-soc-link:hover,
@@ -406,7 +409,6 @@ img {
 .team-soc-link:hover,
 .team-soc-link:focus {
   fill: var(--light-text-color);
-  transition: color 250ms var(--transition-timing-function);
 }
 div.team-member-description {
   padding: 30px 10px;
@@ -592,6 +594,7 @@ div.team-member-description {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--light-text-color);
+  transition: background-color 250ms var(--transition-timing-function);
 }
 /* buttons */
 .button {
@@ -625,7 +628,6 @@ div.team-member-description {
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
-  transition: color 250ms var(--transition-timing-function);
 }
 .backdrop {
   position: fixed;
